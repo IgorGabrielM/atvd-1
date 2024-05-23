@@ -1,32 +1,32 @@
 import './App.css';
-import { Route, Routes } from 'react-router';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import { AboutYou } from './pages/About-you';
-import { Training } from './pages/Training';
 import { Experience } from './pages/Experience';
 import { Hobby } from './pages/Hobby';
 
 function App() {
   return (
     <>
-      <AboutYou />
-      {/*       <Training /> */}
-      {/* <Experience /> */}
-      {/* <Hobby></Hobby> */}
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <AboutYou />
+          </Route>
 
+          <Route path="/experience" exact>
+            <Experience />
+          </Route>
 
-      {/*       <div>
-        <nav>
-          <ul>
-            <li><span >Sobre Você</span></li>
-          </ul>
-        </nav>
+          <Route path="/hobby" exact>
+            <Hobby />
+          </Route>
 
-        <Routes>
-          <Route path="/" element={<AboutYou />} />
-          <Route path="/training" element={<Training />} />
-
-        </Routes>
-      </div > */}
+          <Route path="/" exact>
+            <AboutYou />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }
