@@ -24,8 +24,8 @@ export function AboutYou() {
   };
 
   return (
-    <div className='w-full h-fit flex justify-center'>
-      <div className='w-2/3 bg-slate-50 p-5 shadow-lg rounded-b-lg border'>
+    <div className='w-full h-screen flex justify-center bg-gray-100'>
+      <div className='w-2/3 h-fit bg-slate-50 p-5 shadow-lg rounded-b-lg border'>
         <h1 className='font-bold text-2xl'>Sobre você</h1>
         <div className='mt-2 flex flex-col gap-2'>
           <div className='flex justify-between items-center'>
@@ -42,9 +42,8 @@ export function AboutYou() {
 
           <div className='flex gap-2'>
             <span className='font-bold'>Bio:</span>
-            <span>Atualmente cursando sistemas para internet(2º semestre)</span>
+            <span>Atualmente cursando sistemas para internet (2º semestre)</span>
           </div>
-
 
           <form onSubmit={handleSubmit}>
             <div>
@@ -71,6 +70,5 @@ export function AboutYou() {
         )}
       </div>
     </div>
-
   );
 }
